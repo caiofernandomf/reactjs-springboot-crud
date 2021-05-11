@@ -9,19 +9,16 @@ import CreateEmployeeComponent from './components/CreateEmployeeComponent';
 function App() {
   return (
     <div>
-        <Router>
-          
-            <HeaderComponent/>
-          
-          <div className="container">
-              <Switch>
-                  <Route path="/" exact component={ListEmployeeComponent}></Route>
-                  <Route path="/employees" component={ListEmployeeComponent}></Route>
-                  <Route path="/add-employee" component={CreateEmployeeComponent}></Route>                  
-              </Switch>
-          </div>
-          <FooterComponent/>
-          
+        <Router>          
+            <HeaderComponent/>          
+            <div className="container">
+                <Switch>
+                    <Route path="/" exact component={ListEmployeeComponent}></Route>
+                    <Route path="/employees" component={ListEmployeeComponent}></Route>
+                    <Route path="/add-employee" component={CreateEmployeeComponent}></Route>                  
+                </Switch>
+            </div>
+            <FooterComponent/>          
         </Router>        
     </div>
     
