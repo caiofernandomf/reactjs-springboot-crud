@@ -23,11 +23,9 @@ class ListEmployeeComponent extends Component {
     render() {
         return (
             <div>
-                <h2 className="text-center">Employees Lis</h2>
-                <div className="row">
-                    <button className="btn btn=primary" onClick={this.addEmployee}>
-                        Add Employee
-                    </button>
+                <h2 className="text-center">Employees List</h2>
+                <div className="row">                    
+                        <button className="btn btn-primary" onClick={this.addEmployee}>Add Employee</button>                    
                 </div>
                 <div className="row">
                         <table className="table table-striped table-borderd">

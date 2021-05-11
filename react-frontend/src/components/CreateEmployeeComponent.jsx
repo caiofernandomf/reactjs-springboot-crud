@@ -5,14 +5,14 @@ class CreateEmployeeComponent extends Component {
         super(props);
         
         this.state={
-            
+
         }
     }
     
     render() {
         return (
             <div>
-                
+                <h1> Employee Form </h1>
             </div>
         );
     }
