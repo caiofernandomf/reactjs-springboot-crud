@@ -16,7 +16,7 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-import net.javaguides.springboot.exception.ResouceNotFoundException;
+
 import net.javaguides.springboot.exception.ResourceNotFoundException;
 import net.javaguides.springboot.model.Employee;
 import net.javaguides.springboot.repository.EmployeeRepository;
@@ -47,7 +47,7 @@ public class EmployeeController {
     public ResponseEntity<Employee> getEmployeeById(@PathVariable Long id){
         
         Employee employee = employeeRepository.findById(id)
-            .orElseThrow(()-> new ResouceNotFoundException("Employee not exist with Id:"+id ));
+            .orElseThrow(()-> new ResourceNotFoundException("Employee not exist with Id:"+id ));
         return ResponseEntity.ok(employee);
     }
 
@@ -56,7 +56,7 @@ public class EmployeeController {
     public ResponseEntity<Employee> updateEmployee(@PathVariable Long id
                                     ,@RequestBody Employee employeeDetails){
         Employee employee = employeeRepository.findById(id)
-        .orElseThrow(()-> new ResouceNotFoundException("Employee not exist with Id:"+id ));
+        .orElseThrow(()-> new ResourceNotFoundException("Employee not exist with Id:"+id ));
 
         employee.setfirstName(employeeDetails.getfirstName());
         employee.setLastName(employeeDetails.getLastName());
